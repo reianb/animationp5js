@@ -37,14 +37,16 @@ function draw() {
    // describe('pressing the mouse changes the frame rate to 60 fps; the third rectangle with full opacity is removed', FALLBACK);
     //describeElement('the x position and y position of the same rectangles are now the same with the x and y coordinates of the mouse', FALLBACK);
     frameRate(60);
-    fill(r,g,b);
-    noStroke();
-    rect(mouseX,mouseY,rectWidth,rectHeight);
-    fill(r,g,b,50);
-    noStroke();
-    rect(mouseX+80,mouseY+80,rectWidth,350);
-    fill(r,g,b)
-    noStroke();
+    for(let n=1; n<4; n++){
+      fill(r,g,b);
+      noStroke();
+      rect(mouseX*n,mouseY*n,250,250);
+    }
+    //fill(r,g,b,50);
+    //noStroke();
+    //rect(mouseX+80,mouseY+80,rectWidth,350);
+    //fill(r,g,b)
+    //noStroke();
     //rect(mouseY,mouse,rectWidth,350);
     
   }
