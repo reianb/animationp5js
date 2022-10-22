@@ -13,19 +13,19 @@ function draw() {
   let rectWidth = (map(mouseY, 350, canvasWidth, 350, 600));
   let rectHeight = (map(mouseX, 350, canvasHeight, 350, 600));
   let rotateRect= (map(mouseX,0,canvasWidth, 0, 180));
-  //describe('a shade of red that is bordering hot pink', FALLBACK);
+  describe('a shade of red that is bordering hot pink',FALLBACK);
   background(150, 0, 50);
   frameRate(3);
   if (mouseIsPressed == false) {
-    //describe('hovering over canvas creates 3 different yellow rectangles on the red background that move around the page and rotate on an axis', FALLBACK);
-    //describeElement('the shade, x-position, y-position, width, height, and degree of rotation of yellow boxes depend on the x and y coordinates of the mouse. Frame rate is 3 frames per second', FALLBACK);
-    //describeElement('the x positions of the rectangles is the y position of the mouse; the y positions of the rectangles are the x position of the mouse', FALLBACK);
+    describe('hovering over canvas creates 3 different yellow rectangles on the red background that move around the page and rotate on an axis');
+    describeElement('the shade, x-position, y-position, width, height, and degree of rotation of yellow boxes depend on the x and y coordinates of the mouse. Frame rate is 3 frames per second');
+    describeElement('the x positions of the rectangles is the y position of the mouse; the y positions of the rectangles are the x position of the mouse');
     fill(r,g,b);
     noStroke();
     rotate(rotateRect);
     rect(mouseY,mouseX,rectWidth,rectHeight);
     rotate(rotateRect);
-    //describeElement('rectangle width and height are 80 pixels more than mouse position; opacity is at 80', FALLBACK);
+    describeElement('rectangle width and height are 80 pixels more than mouse position; opacity is at 80');
     fill(r,g,b,80);
     noStroke();
     rect(mouseY+80,mouseX+80,rectWidth,350);
@@ -34,15 +34,15 @@ function draw() {
     rect(mouseX,mouseY,rectWidth,350);
   }
   else {
-   // describe('pressing the mouse changes the frame rate to 60 fps; the third rectangle with full opacity is removed', FALLBACK);
-    //describeElement('the x position and y position of the same rectangles are now the same with the x and y coordinates of the mouse', FALLBACK);
+   describe('pressing the mouse changes the frame rate to 60 fps; the third rectangle with full opacity is removed' );
+   describeElement('the x position and y position of the same rectangles are now the same with the x and y coordinates of the mouse');
     frameRate(60);
     for(let n=1; n<4; n++){
-      fill(r,g,b);
+      fill(b,r,g);
       noStroke();
       rect(mouseX*n,mouseY*n,250,250);
     }
-    //fill(r,g,b,50);
+    fill(r,g,b,50);
     //noStroke();
     //rect(mouseX+80,mouseY+80,rectWidth,350);
     //fill(r,g,b)
