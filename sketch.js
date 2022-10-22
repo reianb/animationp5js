@@ -46,6 +46,7 @@ function draw() {
     fill(r,g,b)
     noStroke();
     //rect(mouseY,mouse,rectWidth,350);
+    
   }
 
 }
